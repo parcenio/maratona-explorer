@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
+  <script src="/index.js"></script>
   <title>Maratona Explorer</title>
 </head>
 
@@ -15,7 +16,12 @@
     <h1>Vou revelar seu destino!</h1>
     <p>Clique em fazer pergunta para que seu destino seja revelado.</p>
     <input type="text" placeholder="Faça sua pergunta aqui">
-    <button>Fazer Pergunta</button>
+
+    <!-- A propriedade "onclick" é responsavel por executar a função que você vai passar pra ele, e que você criou no documento java script -->
+    <button onclick="fazerPergunta()">Fazer Pergunta</button>
+
+    <h3 id="resposta"></h3>
+
   </div>
 </body>
 
