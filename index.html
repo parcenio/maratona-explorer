@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <script src="/index.js"></script>
   <title>Maratona Explorer</title>
 </head>
 
@@ -15,7 +14,7 @@
     <img src="https://gist.githubusercontent.com/maykbrito/0acdf4ce919838ffed50915a31fc5b23/raw/6f4dd01ec3116428ec4c99255944cb9ac7927590/cristal-ball.svg" alt="Imagem de uma bola de cristal">
     <h1>Vou revelar seu destino!</h1>
     <p>Clique em fazer pergunta para que seu destino seja revelado.</p>
-    <input type="text" placeholder="Faça sua pergunta aqui">
+    <input id="pergunta" type="text" placeholder="Faça sua pergunta aqui">
 
     <!-- A propriedade "onclick" é responsavel por executar a função que você vai passar pra ele, e que você criou no documento java script -->
     <button onclick="fazerPergunta()">Fazer Pergunta</button>
@@ -23,6 +22,9 @@
     <h3 id="resposta"></h3>
 
   </div>
+
+  <!-- Para que o innerHTML funcione, o script, tem que estar após a declaração do ID no corpo HTML, caso contrário, ele sempre vai retornar NULL para o ID que está tentando puxar. BOA PRÀTICA: Sempre colocar o scripJS, no final, junto ao body. -->
+  <script src="/index.js"></script>
 </body>
 
 </html>

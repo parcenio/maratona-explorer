@@ -1,5 +1,6 @@
 //criando a variavel pra resposta, o querySelector passando qual o ID dele, para ele ser encontrado no HTML
 const respostaElement = document.querySelector("#resposta");
+const perguntaElement = document.querySelector("#pergunta");
 
 const respostas = [
   "Certeza!",
@@ -30,8 +31,10 @@ function fazerPergunta() {
   //calcular utilizando o floor, para arrendondar sempre pro piso, multiplica o numero aleatorio com random que sempre é de 0 a 0.99 ou aproximadamente, e multiplica pelo total de respostas, gerando sempre numeros aleatorios e sempre até o maximo de posições no nosso array de resposta
   const numeroAleatorio = Math.floor(Math.random() * totalRespostas);
 
-  console.log(respostas[numeroAleatorio]);
+  //testando a impressao das respostas no console do brownser
+  // console.log(respostas[numeroAleatorio]);
 
   //innerHTML, significa que o objeto respostaElement é um modelo HTML e ele vai mostrar na página
-  respostaElement.innerHTML = "MOSTRAR";
+  respostaElement.innerHTML =
+    "<div>" + perguntaElement + "</div>" + respostas[numeroAleatorio];
 }
